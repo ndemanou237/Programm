@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>403 - Accès interdit</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            text-align: center;
+            max-width: 500px;
+            background: #1e293b;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+            border: 1px solid #334155;
+        }
+        .icon {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+        .error-code {
+            font-size: 72px;
+            font-weight: 800;
+            color: #f59e0b;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+        .title {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #f1f5f9;
+        }
+        .message {
+            font-size: 15px;
+            color: #94a3b8;
+            line-height: 1.6;
+            margin-bottom: 28px;
+        }
+        .actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #3b82f6;
+            color: #ffffff;
+            font-weight: 500;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.2s ease;
+            font-size: 14px;
+        }
+        .btn:hover {
+            background-color: #2563eb;
+        }
+        .btn-secondary {
+            background-color: #334155;
+            color: #cbd5e1;
+        }
+        .btn-secondary:hover {
+            background-color: #475569;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="icon">🔒</div>
+        <div class="error-code">403</div>
+        <h1 class="title">Accès refusé</h1>
+        <p class="message">
+            Désolé, vous n'avez pas les permissions nécessaires pour accéder à cette page ou effectuer cette action.
+        </p>
+        <div class="actions">
+            <a href="/" class="btn">Retourner à l'accueil</a>
+            <a href="/admin/login/" class="btn btn-secondary">Se connecter</a>
+        </div>
+    </div>
+
+</body>
+</html>

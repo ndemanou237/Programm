@@ -1,3 +1,7 @@
 from django.db import models
 
-# Create your models here.
+class Event(models.Model):
+    title = models.CharField(max_length=100)
+    start_time = models.DateTimeField()
+    def __str__(self):
+        return f"{self.title} - {self.start_time}"

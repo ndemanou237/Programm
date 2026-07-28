@@ -1,0 +1,28 @@
+{% load tz %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ event.title }}</title>
+</head>
+<body>
+    <h1>Evenement : {{ event.title }}</h1>
+    <p>
+        <strong>Heure locale (douala)</strong>
+        {{ event.start_time|date:"d/m/Y H:i" }}
+    </p>
+    <p>
+        <strong>Heure UTC (stocké en BDD)</strong>
+        {{ event.start_time|utc|date:"d/m/Y H:i" }}
+    </p>
+
+    {% timezone "Europe/Paris" %}
+    <p>
+        <strong>Heure pour les participants à paris:</strong>
+        {{ event.start_time|date:"d/m/Y H:i" }}
+    </p>
+    {% endtimezone%}
+    
+</body>
+</html>

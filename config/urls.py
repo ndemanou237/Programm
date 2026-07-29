@@ -16,9 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from rest_framework.routers import DefaultRouter
+from main.views import TacheViewSet
+
+router = DefaultRouter()
+router.register('taches', TacheViewSet, basename='tache')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blog.urls')),
     path('', include('main.urls')),
+    path('api/', include(router.urls)),
 ]

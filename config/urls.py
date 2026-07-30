@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path,include
 from rest_framework.routers import DefaultRouter
 from main.views import TacheViewSet
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 router = DefaultRouter()
 router.register('taches', TacheViewSet, basename='tache')
@@ -28,3 +29,5 @@ urlpatterns = [
     path('', include('main.urls')),
     path('api/', include(router.urls)),
 ]
+
+urlpatterns += staticfiles_urlpatterns()

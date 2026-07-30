@@ -114,7 +114,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 #     }
 # }
 
-DATABASS = {
+DATABASE = {
     'default': dj_database_url.parse(config('DATABASE_URL'))
 }
 

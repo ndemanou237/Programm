@@ -1,4 +1,5 @@
 from datetime import datetime
+from django.urls import path
 
 def infos_globales(request):
     return {
